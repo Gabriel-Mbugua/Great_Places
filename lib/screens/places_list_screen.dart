@@ -50,25 +50,60 @@ class PlacesListScreen extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
                               children: <Widget>[
-                                ListTile(
-                                  trailing: CircleAvatar(
-                                    radius: 30,
-                                    backgroundImage: FileImage(
-                                      greatPlaces.items[i].image,
+                                // ListTile(
+                                //   trailing: CircleAvatar(
+                                //     radius: 30,
+                                //     backgroundImage: FileImage(
+                                //       greatPlaces.items[i].image,
+                                //     ),
+                                //   ),
+                                //   title: Text(
+                                //     greatPlaces.items[i].title,
+                                //   ),
+                                //   subtitle: Text(
+                                //     greatPlaces.items[i].location.address,
+                                //   ),
+                                //   onTap: () {
+                                //     Navigator.of(context).pushNamed(
+                                //       PlaceDetailScreen.routeName,
+                                //       arguments: greatPlaces.items[i].id,
+                                //     );
+                                //   },
+                                // ),
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).pushNamed(
+                                        PlaceDetailScreen.routeName,
+                                        arguments: greatPlaces.items[i].id,
+                                      );
+                                    },
+                                    child: Card(
+                                      elevation: 2,
+                                      child: Column(
+                                        children: <Widget>[
+                                          Hero(
+                                            tag: greatPlaces.items[i].id,
+                                            child: Image.file(
+                                              greatPlaces.items[i].image,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: ListTile(
+                                              title: Text(
+                                                greatPlaces.items[i].title,
+                                              ),
+                                              subtitle: Text(greatPlaces
+                                                  .items[i].location.address),
+                                            ),
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                  title: Text(
-                                    greatPlaces.items[i].title,
-                                  ),
-                                  subtitle: Text(
-                                    greatPlaces.items[i].location.address,
-                                  ),
-                                  onTap: () {
-                                    Navigator.of(context).pushNamed(
-                                      PlaceDetailScreen.routeName,
-                                      arguments: greatPlaces.items[i].id,
-                                    );
-                                  },
                                 ),
                                 Divider(),
                               ],
