@@ -1,6 +1,23 @@
-# great_places
+# Great places application
 
-A new Flutter project.
+An application that allows for uses to create memories of places they've been. Uses native device features such as the camera to allow a user to take photos, Maps and Location to allow users to fetch information about their current and other locations and finally saves all their data locally.
+
+# Home Page
+<img src = "assets/home_page.jpg" width = "400">
+
+# Place Detail Page
+<img src = "assets/place_detail_page.jpg" width ="400">
+
+# Add Place Page
+<img src = "assets/add_place_page.jpg" width = "400">
+
+# Current Location Selected
+<img src = "assets/selected_place.jpg" width = "400">
+
+# Select on Map
+<img src = "assets/maps_page.jpg" width = "400">
+
+
 
 ## Getting Started
 
