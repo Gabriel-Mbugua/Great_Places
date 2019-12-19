@@ -47,7 +47,7 @@ class PlaceDetailScreen extends StatelessWidget {
               height: 10,
             ),
             FlatButton(
-              child: Text(
+              child: const Text(
                 "View on Map",
                 style: TextStyle(
                   fontSize: 18,
